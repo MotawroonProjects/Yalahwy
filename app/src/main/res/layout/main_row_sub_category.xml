@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.yalahwy.models.SubCategoryModel" />
+
+        <variable
+            name="lang"
+            type="String" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="3dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="2dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                image="@{model.photo}"
+                type="@{6}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_trans"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:singleLine="true"
+                android:text='@{lang.equals("ar")?model.name:model.nameEN}'
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:visibility="gone" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

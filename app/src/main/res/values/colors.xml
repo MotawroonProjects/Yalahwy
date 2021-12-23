@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C00B1E</color>
+    <color name="colorPrimaryDark">#C00B1E</color>
+    <color name="colorAccent">#C00B1E</color>
+    <color name="color1">#C00B1E</color>
+    <color name="color3">#1AFF0000</color>
+    <color name="color2">#F6F6F6</color>
+    <color name="white">#fff</color>
+    <color name="white_trans">#55ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="green">#017B00</color>
+
+    <color name="gray0">#fafafa</color>
+    <color name="gray1">#f5f5f5</color>
+    <color name="gray2">#eee</color>
+    <color name="gray3">#e0e0e0</color>
+    <color name="gray4">#bababa</color>
+    <color name="gray5">#c3c3c3</color>
+    <color name="gray6">#b0afbb</color>
+    <color name="gray7">#a0a0a0</color>
+    <color name="gray8">#707070</color>
+    <color name="gray9">#757575</color>
+    <color name="gray5_tans">#22c3c3c3</color>
+    <color name="rate_color">#FFD800</color>
+    <color name="black_trans">#55000000</color>
+    <color name="color_primary_trans">#55006699</color>
+    <color name="google">#DB4437</color>
+    <color name="facebook">#4267B2</color>
+</resources>

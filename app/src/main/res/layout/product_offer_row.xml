@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.yalahwy.models.ProductModel" />
+
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="3dp"
+
+        >
+
+        <FrameLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    >
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center_horizontal"
+                        image="@{model.photo}"
+                        type="@{3}"
+                        app:riv_corner_radius="5dp"
+                        />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+
+                        >
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@color/white"
+                            android:layout_gravity="center"
+                            />
+                        <CheckBox
+                            android:id="@+id/checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:button="@drawable/checkbox_bg"
+                            android:checked="@{model.is_wishlist==null?false:true}"
+                            android:layout_gravity="center"
+                            />
+
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@{model.name}"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:text='@{model.price+" "+@string/sar}'
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/small_rounded_gray2"
+                        android:padding="2dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            day="@{model.discount_date}"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="9sp"
+                            android:textStyle="bold"
+                            android:text="@string/day"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/small_rounded_gray2"
+                        android:padding="2dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            hour="@{model.discount_date}"
+
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="9sp"
+                            android:textStyle="bold"
+                            android:text="@string/hour"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/small_rounded_gray2"
+                        android:padding="2dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            minutes="@{model.discount_date}"
+
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="9sp"
+                            android:textStyle="bold"
+                            android:text="@string/minute"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

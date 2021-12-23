@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.yalahwy.models.ProductModel" />
+        <variable
+            name="lang"
+            type="String" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/gray0"
+
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="@string/comments2"
+            android:layout_margin="8dp"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tvNoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="@string/no_comments"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/llComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_white_strock"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+                    <EditText
+                        android:id="@+id/edtComment"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:singleLine="true"
+                        android:hint="@string/add_comment"
+                        android:textColorHint="@color/gray8"
+                        />
+                    <ImageView
+                        android:id="@+id/btnSend"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_send"
+                        android:padding="8dp"
+                        app:tint="@color/colorPrimary"
+                        android:rotation='@{lang.equals("ar")?180:0}'
+                        />
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="0dp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

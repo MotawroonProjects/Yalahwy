@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.yalahwy.models.CategorySubCategoryModel" />
+
+        <variable
+            name="lang"
+            type="String" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:longClickable="false"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                image="@{model.photo}"
+                type="@{2}"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+
+
+                />
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text='@{lang.equals("ar")?model.name:model.nameEN}'
+                android:textColor="@color/gray5"
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/horizontal_lin"
+            />
+
+    </LinearLayout>
+
+
+</layout>

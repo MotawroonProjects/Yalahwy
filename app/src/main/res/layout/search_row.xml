@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.yalahwy.models.ProductModel" />
+
+        <variable
+            name="lang"
+            type="String" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="3dp"
+        app:contentPadding="5dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+
+                    >
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center_horizontal"
+                        image="@{model.photo}"
+                        type="@{3}"
+                        app:riv_corner_radius="5dp"
+                        />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        >
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@color/white"
+                            android:layout_gravity="center"
+                            />
+                        <CheckBox
+                            android:id="@+id/checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:button="@drawable/checkbox_bg"
+                            android:checked="@{model.is_wishlist==null?false:true}"
+                            android:layout_gravity="center"
+                            />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text='@{lang.equals("ar")?model.name:model.name_EN}'
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:text='@{model.price+" "+@string/sar}'
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

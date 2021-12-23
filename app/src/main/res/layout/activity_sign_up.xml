@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.yalahwy.models.SignUpModel" />
+<variable
+    name="lang"
+    type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray0">
+
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="150dp"
+            android:background="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="@+id/card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="250dp"
+            android:layout_height="90dp"
+            android:src='@{lang.equals("ar")?@drawable/logoar:@drawable/logoen}'            android:transitionName="logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".05"
+            tools:ignore="UnusedAttribute" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="3dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintVertical_bias=".15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@color/color1" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/small_rounded_red_strock"
+                    app:hintEnabled="false"
+                    app:startIconDrawable="@drawable/ic_nav_user"
+                    app:startIconTint="@color/colorPrimary"
+                    tools:ignore="RtlCompat">
+
+                    <EditText
+                        error="@{model.error_name}"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:hint="@string/user_name"
+                        android:singleLine="true"
+                        android:text="@={model.name}"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray4"
+                        android:textSize="14sp"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/small_rounded_red_strock"
+                    app:hintEnabled="false"
+                    app:startIconDrawable="@drawable/ic_email"
+                    app:startIconTint="@color/colorPrimary"
+                    tools:ignore="RtlCompat">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:text="@={model.email}"
+                        error="@{model.error_email}"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray4"
+                        android:textSize="14sp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/small_rounded_red_strock"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="8dp"
+
+
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:src="@drawable/flag_eg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/edtPhone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="+20"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edtPhone"
+                        error="@{model.error_phone}"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/phone"
+                        android:inputType="number"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@={model.phone}"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray8"
+                        android:textSize="14sp"
+                        tools:ignore="TextFields" />
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/small_rounded_red_strock"
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorPrimary"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    app:startIconTint="@color/colorPrimary"
+                    tools:ignore="RtlCompat">
+
+                    <EditText
+                        error="@{model.error_password}"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:text="@={model.password}"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray4"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/btn_change_lang"
+                    android:minWidth="150dp"
+                    android:text="@string/register"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/you_have_an_account"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/login"
+                        android:textColor="@color/color1"
+                        android:textSize="15sp"
+
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

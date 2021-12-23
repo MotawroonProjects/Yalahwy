@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1018707107007",
+    "project_id": "yallahwi-855db",
+    "storage_bucket": "yallahwi-855db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018707107007:android:8bf2752a2156bcc1033a0a",
+        "android_client_info": {
+          "package_name": "com.yalahwy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018707107007-lbd4pnj4p0ddj3ab3k5ontrm22vduk6n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yalahwy",
+            "certificate_hash": "02234e9655300f70fcb3d1f946434728fcb0fcea"
+          }
+        },
+        {
+          "client_id": "1018707107007-cdl677mun81joqc6rgqtsbag7vp8c26n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpp4gRJcPB5-q4nEp4BMNnbw87Zac_hWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018707107007-cdl677mun81joqc6rgqtsbag7vp8c26n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1018707107007-l308rp2b9sp7dvedttpnqoik4j277knj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.motawron.Yallahwi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
