@@ -2,7 +2,7 @@ package com.yalahwy.tags;
 
 public class Tags {
 
-    public static String base_url = "http://athomegy.com/";
+    public static String base_url = "https://yalahoy.com/";
     public static final String IMAGE_Slider_URL = base_url+"assets/images/sliders/";//type=1
     public static final String IMAGE_Maincategory_URL = base_url+"assets/images/categories/";//type=2
     public static final String IMAGE_Product_URL = base_url+"assets/images/products/";//type=3
