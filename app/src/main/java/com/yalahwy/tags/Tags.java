@@ -2,14 +2,14 @@ package com.yalahwy.tags;
 
 public class Tags {
 
-    public static String base_url = "https://yalahoy.com/";
-    public static final String IMAGE_Slider_URL = base_url+"assets/images/sliders/";//type=1
-    public static final String IMAGE_Maincategory_URL = base_url+"assets/images/categories/";//type=2
-    public static final String IMAGE_Product_URL = base_url+"assets/images/products/";//type=3
-    public static final String IMAGE_Product_Gallery_URL = base_url+"assets/images/galleries/";//type=4
-    public static final String IMAGE_Sliderbottom_URL = base_url+"assets/images/slider/";//type=5
-    public static final String IMAGE_Subcategory_URL = base_url+"assets/images/sub/";//type=2
-    public static final String IMAGE_User_URL = base_url+"assets/images/user/";//type=6
+    public static String base_url = "http://yalahoy.com/";
+    public static final String IMAGE_Slider_URL = base_url + "assets/images/sliders/";//type=1
+    public static final String IMAGE_Maincategory_URL = base_url + "assets/images/categories/";//type=2
+    public static final String IMAGE_Product_URL = base_url + "assets/images/products/";//type=3
+    public static final String IMAGE_Product_Gallery_URL = base_url + "assets/images/galleries/";//type=4
+    public static final String IMAGE_Sliderbottom_URL = base_url + "assets/images/slider/";//type=5
+    public static final String IMAGE_Subcategory_URL = base_url + "assets/images/sub/";//type=2
+    public static final String IMAGE_User_URL = base_url + "assets/images/user/";//type=6
 
 
     public static final String IMAGE_Places_URL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=";
